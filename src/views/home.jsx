@@ -14,7 +14,7 @@ export default function Home() {
   }
 
   return (
-    <View title="Jon and Gracie wuz here">
+    <View title="The web's best pizza">
       <div className='w-screen h-64 bg-center bg-cover bg-no-repeat' style={{ backgroundImage: 'url(/pizza-hero.jpg)' }}></div>
       <div className='flow flow-col justify-center'>
         <Button title='Order now' onPress={orderNow} />
