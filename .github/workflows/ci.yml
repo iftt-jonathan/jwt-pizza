@@ -32,8 +32,8 @@ jobs:
       - name: set version
         id: set_version
         run: |
-          version=$(date +'%Y%m%d.%H%M%S')
-          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "version=$(date + '%Y%m%d.%H%M%S')" >> $GITHUB_OUTPUT
+          echo "$version"
           printf '{"version": "%s" }' "$version" > public/version.json
 
       - name: Update dist artifact
