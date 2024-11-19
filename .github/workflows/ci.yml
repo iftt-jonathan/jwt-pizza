@@ -32,8 +32,8 @@ jobs:
       - name: set version
         id: set_version
         run: |
-          echo "version=$(date + '%Y%m%d.%H%M%S')" >> $GITHUB_OUTPUT
-          echo "$version"
+          version=$(date +'%Y%m%d.%H%M%S')
+          echo "version=$version" >> "$GITHUB_OUTPUT"
           printf '{"version": "%s" }' "$version" > public/version.json
 
       - name: Update dist artifact
@@ -78,8 +78,8 @@ jobs:
       - name: Push to AWS S3
         # Append the version to the path
         run: |
-          echo Deploying $version
-          aws s3 cp dist s3://${{ secrets.APP_BUCKET }}/$version --recursive
+          echo "Deploying version ${{ needs.build.outputs.version }}"
+          aws s3 cp dist s3://${{ secrets.APP_BUCKET }}/${{ needs.build.outputs.version }} --recursive
 
   release:
     needs:
@@ -92,8 +92,8 @@ jobs:
         env:
           version: ${{needs.build.outputs.version}}
         with:
-          tag: version-${{ env.version }}
-          name: Version ${{ env.version }}
+          tag: version-${{ needs.build.outputs.version }}
+          name: Version ${{ needs.build.outputs.version }}
           body: |
             ## 🚀 Changes
 
