@@ -3,12 +3,12 @@ For my Curiosity Report, I wanted to learn more about the other big cloud servic
 Azure was launched in 2010, 4 years after AWS. It has 22% of the market share compared to AWS with 33%, althought it seems that most big Azure clients are more legacy companies, or non-tech industry companies, like Nike, Dell, or Starbucks. This matches with Microsoft's reputation for being a legacy, old business software company. These companies are also more likely to use other Microsoft Business products like Windows Server and Office 365, which Azure has better integration with. AWS on the other hand is used by the biggest tech companies of the last two decoades, like Netflix or Spotify.
 
 Azure's counterparts to the AWS products we used in this class are as follows:
---Azure Blob Storage versus S3
---Azure Front Door or Azure CDN instead of AWS CloudFront
---Azure Database for MySQL instead of AWS RDS MySQL
---Azure Container Registry (ACR) instead of AWS ECR
---Azure Kubernetes Service (AKS) or Azure Container Instances (ACI) instead of AWS ECS
---Azure Resource Manager (ARM) Templates instead of AWS CloudFormation
+- Azure Blob Storage versus S3
+- Azure Front Door or Azure CDN instead of AWS CloudFront
+- Azure Database for MySQL instead of AWS RDS MySQL
+- Azure Container Registry (ACR) instead of AWS ECR
+- Azure Kubernetes Service (AKS) or Azure Container Instances (ACI) instead of AWS ECS
+- Azure Resource Manager (ARM) Templates instead of AWS CloudFormation
 
 Most of the services seemed almost identical from my reading on them. Two that I could find more interesting pros and cons on:
 
